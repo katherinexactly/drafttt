@@ -1,0 +1,263 @@
+@font-face{
+    font-family: 'Work';
+    src: url('Fonts/WorkSans-VariableFont_wght.ttf');
+    font-weight: 300;
+}
+@font-face{
+    font-family: 'Allura';
+    src: url('Fonts/Allura-Regular.ttf');
+}
+.parallax {
+    background-image: url('Images/about.jpg');
+    height: 100%; 
+    width: 80%;
+    background-attachment: fixed;
+    background-position-y: top;
+    background-position-x: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .parallax h2{
+    font-family: 'Work';
+    color: #fff;
+    font-weight: bold;
+  }
+
+/* FIRST SECTION */
+/* FOOTER */
+#footer{
+    background-color: #ddadab;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0.2rem;
+    width: 100%;
+}
+#footer p{
+    font-family: 'Work';
+}
+
+@media screen and (max-width: 800px){
+    .parallax {
+
+        width: 100%;
+      }
+}
+@supports (-webkit-touch-callout: none){
+    .parallax, #strip{
+        background-attachment: scroll;
+    }
+}
+b{
+    text-decoration: underline;
+}
+/* Timeline holder */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+ /* Timeline vertical line */
+ul.timeline:before {
+    content: ' ';
+    top: -7.9rem;
+    background: #fff;
+    display: inline-block;
+    position: absolute;
+    left: 16px;
+    width: 4px;
+    height: calc(100% + 11.9rem);
+    z-index: 400;
+    border-radius: 1rem;
+}
+.row h4{
+    font-family: 'Allura';
+    padding-left: 10%;
+}
+li.timeline-item {
+    margin: 0.8rem 0;
+    padding-bottom: 0.5rem!important;
+    font-family: 'Work';
+}
+li.timeline-item p{
+    font-size: 0.9rem;
+}
+/* Timeline item arrow */
+.timeline-arrow {
+    border-top: 0.5rem solid transparent;
+    border-right: 0.5rem solid #fff;
+    border-bottom: 0.5rem solid transparent;
+    display: block;
+    position: absolute;
+    left: 2rem;
+}
+
+/* Timeline item circle marker */
+li.timeline-item::before {
+    content: ' ';
+    background: #ddd;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #fff;
+    left: 11px;
+    width: 14px;
+    height: 14px;
+    z-index: 400;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+body {
+    background: #E8CBC0;
+    background: -webkit-linear-gradient(to right, #ffebe0 40%, #ddadab);
+    background: linear-gradient(to right, #ffebe0 40%, #ddadab);
+    min-height: 100vh;
+}
+
+.text-gray {
+    color: #3d3d3d;
+}
+
+/* FIRST SECTION */
+
+
+.hi{
+    padding: 4rem 0;
+    background-color: white;
+    display: flex;
+    padding-left: 10%;
+    padding-right: 10%;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    color: black;
+    padding-top: 5rem;
+}
+.hi h3{
+    font-family: 'Work';
+    margin-bottom: 1rem;
+}
+.hi h4{
+    position: relative;
+    top: 0.5rem;
+    font-family: 'Allura';
+}
+.hi p{
+    font-size: 0.9rem;
+    font-family: 'Work';
+}
+.hi li{
+    font-size: 0.8rem;
+    font-family: 'Work';
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+.about-text{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.about-photos{
+    width: 28%;
+    min-width: 250px;
+    min-height: 500px;
+    background-image: url(Images/aboutmain.jpg);
+    background-size: cover;
+    position: relative;
+}
+#square{
+    position: absolute;
+    width: 10rem;
+    top: -3rem;
+    right: -4rem;
+}
+#prize{
+    background-image: url(Images/prize.jpg);
+    background-position-x: center;
+    background-position-y: center;
+    min-height: 410px;
+}
+
+/* COMPETITION */
+
+#biggest{
+    display: flex;
+    padding: 0 15%;
+    justify-content: center;
+    gap: 2rem;
+    background-color: white;
+    align-items: center;
+    padding-bottom: 4rem;
+}
+.text-for-competition p{
+    font-size: 0.9rem;
+    font-family: 'Work';
+    width: 90%;
+}
+#biggest img{
+    max-width: 40%;
+}
+@media screen and (max-width: 710px){
+    .hi{
+        flex-direction: column;
+        padding-top: 3rem;
+        padding-bottom: 2rem;
+    }
+    .about-text{
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    #prize{
+        background-image: url(Images/prizes.jpg);
+        width: 100%;
+        min-height: 500px;
+        background-position-x: center;
+        background-position-y: center;
+    }
+    #secondary{
+        margin-bottom: 0;
+    }
+    #biggest{
+        flex-direction: column-reverse;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    #biggest p{
+        width: 100%;
+    }
+    #biggest img{
+        width: 100%;
+        max-width: unset;
+    }
+}
+@media screen and (max-width: 400px){
+    .hi{
+        flex-direction: column;
+        padding-top: 3rem;
+    }
+    #square{
+        width: 8rem;
+        right: -2rem;
+    }
+    .about-photos{
+        width: 28%;
+        min-width: 230px;
+        background-image: url(Images/aboutmain.jpg);
+        background-size: cover;
+        position: relative;
+        min-height: 400px;
+    }
+}
+@media screen and (max-width: 550px){
+    #top-page img {
+        padding-bottom: 15px;
+        width: 150pxpx;
+}
+}
